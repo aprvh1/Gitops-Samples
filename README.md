@@ -81,6 +81,56 @@ This sample demonstrates how to deploy an application to a new environment using
 
 ---
 
+### 7️⃣ [Harness Secret Expressions in GitOps Application Manifests](./GitOps-Secret-Expressions)
+
+This guide demonstrates how to use **Harness Secret Expressions** directly in GitOps application manifests for secure, centralized secret management.
+
+**Key Features**:
+
+✔ **Centralized Secret Management**: Create secrets once in Harness (backed by HashiCorp Vault) and reference them across all applications
+
+✔ **No Separate Manifests Needed**: Same manifests work for both GitOps Applications and CD Pipelines
+
+✔ **Portable Helm Charts**: Keep your Helm templates vendor-agnostic - expressions go in `values.yaml`, not in templates
+
+✔ **Enhanced Security**: Secrets are resolved during deployment and automatically masked in UIs
+
+**Includes Three Sample Applications**:
+
+📁 **Sample 1: Simple Kubernetes Secret** ([`/simple-example`](./GitOps-Secret-Expressions/simple-example/))
+- Secret expressions **directly in Secret manifest** (`stringData` field)
+- Simplest approach for teams using plain Kubernetes YAML
+- Shows account/org/project-level secret scopes
+
+📁 **Sample 2: Helm Chart with Values File** ([`/helm-values-example`](./GitOps-Secret-Expressions/helm-values-example/))
+- Secret expressions in **`values.yaml` file**
+- Templates use standard `{{ .Values.* }}` syntax (stays portable!)
+- Best practice for Helm users - no vendor lock-in
+
+📁 **Sample 3: Shared Manifests** ([`/shared-manifests-example`](./GitOps-Secret-Expressions/shared-manifests-example/))
+- Proves you **don't need separate manifests** for GitOps vs CD Pipeline
+- Same Git repo works for both deployment methods
+- Eliminates duplication
+
+**Documentation Includes**:
+- Patch script for existing GitOps agents
+- Step-by-step setup for each sample
+- Clear explanation of where secret expressions work (and don't work)
+- Vault configuration details
+- Troubleshooting guide
+
+**Secret Expression Examples**:
+```yaml
+# In Secret manifest or values.yaml:
+vault-secret: <+secrets.getValue("account.vaultSecret")>
+api-key: <+secrets.getValue("org.apiKey")>
+db-password: <+secrets.getValue("dbPassword")>
+```
+
+**Perfect for**: Teams looking to eliminate hardcoded secrets in Git while maintaining GitOps best practices with HashiCorp Vault integration.
+
+---
+
 ## 🎯 Why Use These GitOps Samples?  
 ✅ **Automate deployments** using GitOps principles  
 
@@ -92,6 +142,8 @@ This sample demonstrates how to deploy an application to a new environment using
 
 ✅ **Strengthen security** by integrating security testing into the pipeline
 
-✅ **Increase efficiency** by syncing multiple applications dynamically 
+✅ **Increase efficiency** by syncing multiple applications dynamically
+
+✅ **Centralize secret management** with Harness secret expressions in manifests
 
 These examples provide a step-by-step guide to setting up Harness GitOps pipelines efficiently. Whether you're new to GitOps or looking to enhance your workflows, these samples will help streamline your deployments! 🚀
