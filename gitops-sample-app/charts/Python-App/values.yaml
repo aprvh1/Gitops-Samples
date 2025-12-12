@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: krishi0408/python-helm-native-canary-blue
-  tag: 9
+  tag: "Hello"
   pullPolicy: Always
 
 service:
