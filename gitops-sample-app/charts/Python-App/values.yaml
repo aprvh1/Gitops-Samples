@@ -1,5 +1,5 @@
 image:
-  tag: "Hello"
+  tag: "9"
   repository: "krishi0408/python-helm-native-canary-blue"
   pullPolicy: "Always"
 ingress:
