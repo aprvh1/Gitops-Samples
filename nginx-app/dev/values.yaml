@@ -1,9 +1,10 @@
-# Values must be nested under the dependency name 'nginx'
+image:
+  tag: "mainline-alpine3.23-slim"
 nginx:
   image:
+    tag: "1.25.1-debian-11-r0"
     repository: "nginx"
-    tag: "1.25.1-debian-11-r0"   # <--- APP UPDATE: Change this to deploy new code
-  
   replicaCount: 1
   service:
-    type: ClusterIP
+    type: "ClusterIP"
+FILENAME: "values.yaml"
