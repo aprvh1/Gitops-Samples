@@ -5,4 +5,3 @@ podinfo:
   replicaCount: 1
   ui:
     color: "#34577c"
-FILENAME: "values.yaml"
