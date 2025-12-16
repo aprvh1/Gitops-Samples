@@ -1,0 +1,8 @@
+apiVersion: v2
+name: my-nginx-wrapper-dev
+version: 1.0.0
+dependencies:
+  - name: nginx
+    version: 15.4.0              # <--- INFRA UPDATE: Change this to upgrade NGINX features
+    repository: https://charts.bitnami.com/bitnami
+    
