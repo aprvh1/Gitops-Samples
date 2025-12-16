@@ -1,8 +1,7 @@
 apiVersion: v2
-name: my-nginx-wrapper-dev
+name: my-podinfo-dev
 version: 1.0.0
 dependencies:
-  - name: nginx
-    version: 15.4.0              # <--- INFRA UPDATE: Change this to upgrade NGINX features
-    repository: https://charts.bitnami.com/bitnami
-    
+  - name: podinfo
+    version: 6.7.1              # <--- INFRA UPDATE: Triggers when Chart version changes
+    repository: https://stefanprodan.github.io/podinfo
