@@ -1,7 +1,7 @@
 nginx:
   image:
-    tag: "1.25.1-debian-11-r0"
     repository: "nginx"
+    tag: "mainline-alpine3.23-slim"
   replicaCount: 1
   service:
     type: "ClusterIP"
