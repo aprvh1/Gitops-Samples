@@ -1,8 +1,8 @@
 podinfo:
   image:
-    repository: ghcr.io/stefanprodan/podinfo
-    tag: "6.7.1"
-  
-  ui:
-    color: "#34577c"            # Dev specific UI color (Blue)
+    repository: "ghcr.io/stefanprodan/podinfo"
+    tag: "6.5.0"
   replicaCount: 1
+  ui:
+    color: "#34577c"
+FILENAME: "values.yaml"
