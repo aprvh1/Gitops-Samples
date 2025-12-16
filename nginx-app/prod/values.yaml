@@ -1,0 +1,7 @@
+nginx:
+  image:
+    tag: "1.24.0-debian-11-r0"   # <--- Stable Application Version
+  
+  replicaCount: 3                # Prod specific config
+  service:
+    type: LoadBalancer
