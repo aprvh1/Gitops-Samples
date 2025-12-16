@@ -1,0 +1,7 @@
+apiVersion: v2
+name: my-nginx-wrapper-prod
+version: 1.0.0
+dependencies:
+  - name: nginx
+    version: 15.0.0              # <--- PROD is lagging behind (Older Infrastructure)
+    repository: https://charts.bitnami.com/bitnami
