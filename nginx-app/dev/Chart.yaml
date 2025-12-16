@@ -1,7 +1,8 @@
-apiVersion: "v2"
 name: "my-podinfo-dev"
+apiVersion: "v2"
 version: "1.0.0"
 dependencies:
 - name: "podinfo"
   repository: "https://stefanprodan.github.io/podinfo"
-  version: "6.7.0"
+  version: "6.5.0"
+FOO: "3xFFzfwBT9q09Cp5uANIIA"
