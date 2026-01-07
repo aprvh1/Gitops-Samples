@@ -65,7 +65,7 @@ This sample demonstrates how to **sync multiple GitOps applications** in Harness
 
 ---
 
-### 6️⃣ [ Deploying to a New Environment Using ApplicationSet in PR Pipeline](https://github.com/harness-community/Gitops-Samples/tree/main/Application-Set)
+### 7️⃣ [Deploying to a New Environment Using ApplicationSet in PR Pipeline](https://github.com/harness-community/Gitops-Samples/tree/main/Application-Set)
 
 This sample demonstrates how to deploy an application to a new environment using **ApplicationSet in a PR Pipeline**.
 
@@ -81,7 +81,7 @@ This sample demonstrates how to deploy an application to a new environment using
 
 ---
 
-### 7️⃣ [Harness Secret Expressions in GitOps Application Manifests](./GitOps-Secret-Expressions)
+### 8️⃣ [Harness Secret Expressions in GitOps Application Manifests](./GitOps-Secret-Expressions)
 
 This guide demonstrates how to use **Harness Secret Expressions** directly in GitOps application manifests for secure, centralized secret management.
 
@@ -131,6 +131,37 @@ db-password: <+secrets.getValue("dbPassword")>
 
 ---
 
+### 9️⃣ [Argo Rollouts Examples](./Argo-Rollouts-Examples)
+
+This sample contains comprehensive examples demonstrating various **Argo Rollouts deployment strategies** and progressive delivery features for Kubernetes applications.
+
+**Key Examples Included**:
+
+✔ **Canary Deployments**: Rollout using the canary update strategy with gradual traffic shifting
+
+✔ **Blue-Green Deployments**: Rollout using the blue-green update strategy for instant traffic switching
+
+✔ **Canary Analysis**: Rollout with automated canary analysis using Prometheus metrics for validation
+
+✔ **Experiment (A/B Testing)**: Perform A/B tests with analysis against different variants using job metric providers
+
+✔ **Preview Stack Testing**: Launch experiments that test preview stacks without production traffic
+
+✔ **Canary with Istio**: Two approaches for traffic splitting:
+  - Host-level traffic splitting during updates
+  - Subset-level traffic splitting for more granular control
+
+**Features**:
+- Complete demo application with multiple deployment strategies
+- Integration with service meshes (Istio) for advanced traffic management
+- Automated analysis and validation during rollouts
+- Support for various metric providers (Prometheus, Wavefront, Jobs)
+- Load testing capabilities included
+
+**Perfect for**: Teams implementing progressive delivery, canary deployments, and advanced rollout strategies in Kubernetes with Argo Rollouts.
+
+---
+
 ## 🎯 Why Use These GitOps Samples?  
 ✅ **Automate deployments** using GitOps principles  
 
@@ -145,5 +176,7 @@ db-password: <+secrets.getValue("dbPassword")>
 ✅ **Increase efficiency** by syncing multiple applications dynamically
 
 ✅ **Centralize secret management** with Harness secret expressions in manifests
+
+✅ **Implement progressive delivery** with Argo Rollouts examples for canary, blue-green, and A/B testing strategies
 
 These examples provide a step-by-step guide to setting up Harness GitOps pipelines efficiently. Whether you're new to GitOps or looking to enhance your workflows, these samples will help streamline your deployments! 🚀
