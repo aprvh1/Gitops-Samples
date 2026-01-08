@@ -1,8 +1,8 @@
 podinfo:
   image:
     repository: "ghcr.io/stefanprodan/podinfo"
-    tag: "6.5.0"
+    tag: "6.10.0"
   replicaCount: 1
   ui:
     color: "#34577c"
-FOO: "fAM4v-FuSlCOH4k89syfWQ"
+FOO: "BMXfI7LnRfCJ6B4W-y7psQ"
