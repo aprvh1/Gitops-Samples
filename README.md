@@ -151,6 +151,10 @@ This sample contains comprehensive examples demonstrating various **Argo Rollout
   - Host-level traffic splitting during updates
   - Subset-level traffic splitting for more granular control
 
+✔ **Rollouts with CV (Continuous Verification)**: Pipeline combining Argo Rollouts canary deployments with Harness Verify steps to validate each traffic phase automatically
+
+
+
 **Features**:
 - Complete demo application with multiple deployment strategies
 - Integration with service meshes (Istio) for advanced traffic management
