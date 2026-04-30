@@ -1,14 +1,9 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
-resources:
-- canary-rollout.yaml
-- canary-service.yaml
-#- canary-ingress.yaml
-- canary-preview-service.yaml
-#- canary-preview-ingress.yaml
-
-# This is where the magic happens
 images:
-  - name: argoproj/rollouts-demo  # Matches the image name in your YAML
-    newTag: yellow
+- newTag: "yellow"
+  name: "argoproj/rollouts-demo"
+apiVersion: "kustomize.config.k8s.io/v1beta1"
+kind: "Kustomization"
+resources:
+- "canary-rollout.yaml"
+- "canary-service.yaml"
+- "canary-preview-service.yaml"
