@@ -6,5 +6,5 @@ resources:
 - "canary-preview-service.yaml"
 
 images:
-- newTag: "yellow"
+- newTag: "red"
   name: "argoproj/rollouts-demo"
