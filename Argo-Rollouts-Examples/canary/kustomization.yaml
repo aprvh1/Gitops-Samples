@@ -4,7 +4,3 @@ resources:
 - "canary-rollout.yaml"
 - "canary-service.yaml"
 - "canary-preview-service.yaml"
-
-images:
-- newTag: "red"
-  name: "argoproj/rollouts-demo"
