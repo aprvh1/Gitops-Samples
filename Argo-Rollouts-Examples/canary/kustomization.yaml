@@ -7,3 +7,8 @@ resources:
 #- canary-ingress.yaml
 - canary-preview-service.yaml
 #- canary-preview-ingress.yaml
+
+# This is where the magic happens
+images:
+  - name: argoproj/rollouts-demo  # Matches the image name in your YAML
+    newTag: yellow
